@@ -365,16 +365,6 @@
       textColors: ['rgba(190,190,190,0.85)', 'rgba(255,255,255,0.7)', 'rgba(130,130,130,0.8)'],
       burstColors: ['#bdbdbd', '#9e9e9e', '#757575'],
       mode: 'center'
-    },
-    28: {
-      num: '全新跃',
-      numColor: '#5cc2ff',
-      numGlow: ['#b3e5fc', '#4fc3f7', '#0288d1', '#01437a'],
-      textPool: ['全新跃'],
-      textColors: ['rgba(79,195,247,0.9)', 'rgba(255,255,255,0.8)', 'rgba(3,169,244,0.85)'],
-      burstColors: ['#4fc3f7', '#29b6f6', '#03a9f4', '#0288d1', '#81d4fa', '#ffffff'],
-      numSize: 'min(30vw, 210px)',
-      mode: 'center'
     }
   };
   const GLOW_RADII = [8, 22, 55, 120];
@@ -728,7 +718,6 @@
     if (score === 67) playFx(67);
     else if (score === 100) playFx(100);
     else if (score === 0) playFx(0);
-    else if (score === 28) playFx(28);
   }
 
   function doDraw(forceScore) {
@@ -769,7 +758,6 @@
       if (keyBuffer.endsWith('sixseven')) cheatScore = 67;
       else if (keyBuffer.endsWith('onehundred')) cheatScore = 100;
       else if (keyBuffer.endsWith('zerobadzero')) cheatScore = 0;
-      else if (keyBuffer.endsWith('quanxinyue')) cheatScore = 28;
       if (cheatScore != null) keyBuffer = '';
       doDraw(cheatScore);
       return;
