@@ -27,13 +27,13 @@
     width: 100%;
     max-width: 860px;
     display: flex;
+    flex-wrap: wrap;
     gap: 56px;
     align-items: center;
     justify-content: center;
   }
   .left {
-    flex: 1;
-    max-width: 400px;
+    flex: 0 0 400px;
     text-align: center;
   }
   h1 {
@@ -251,6 +251,7 @@
   @media (max-width: 640px) {
     body { align-items: flex-start; padding-top: 40px; }
     .layout { flex-direction: column; gap: 32px; }
+    .left { flex: none; width: 400px; margin: 0 auto; }
     .right { flex: none; width: 100%; max-width: 400px; }
   }
 </style>
